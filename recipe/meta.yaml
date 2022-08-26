@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.1.3" %}
 
 package:
   name: s-tui
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://github.com/amanusk/s-tui/archive/v{{ version }}.tar.gz
-  sha256: 11490f432f91b0b0535d60a6621903fa40231b871a616259cb6a1db3e2f2c6f6
+  sha256: 1281b3560f6e2de29f26f7b014c7a1b35121718d96de27e5fe75f6eddc12a762
 
 build:
   number: 0
   # urwid not available for windows
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,11 +32,11 @@ about:
   license: GPL-2.0-or-later
   license_family: GPL
   license_file: LICENSE
-  summary: "Stress Terminal UI stress test and monitoring tool"
+  summary: Stress Terminal UI stress test and monitoring tool
   description: |
-      s-tui is a terminal UI for monitoring your computer. s-tui allows to
-      monitor CPU temperature, frequency, power and utilization in a graphical
-      way from the terminal.
+    s-tui is a terminal UI for monitoring your computer. s-tui allows to
+    monitor CPU temperature, frequency, power and utilization in a graphical
+    way from the terminal.
   doc_url: https://amanusk.github.io/s-tui
   dev_url: https://github.com/amanusk/s-tui
 
