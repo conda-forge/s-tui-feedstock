@@ -1,13 +1,12 @@
-{% set version = "1.1.4" %}
+{% set version = "1.4.0" %}
 
 package:
   name: s-tui
   version: {{ version }}
 
 source:
-  
   url: https://github.com/amanusk/s-tui/archive/v{{ version }}.tar.gz
-  sha256: aeebcf7b04beb8526c98d675ae2b2f106fd1e00343b0c37c78b4a84c31561d0b
+  sha256: 92ca86bc7b3c95a573678d0d6ac7b88609c5355762d0278a78bbae998a2f4a39
 
 build:
   number: 0
