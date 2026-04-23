@@ -10,7 +10,7 @@ source:
   sha256: aeebcf7b04beb8526c98d675ae2b2f106fd1e00343b0c37c78b4a84c31561d0b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -18,16 +18,17 @@ build:
 
 requirements:
   host:
-    - python >=2.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=2.7
+    - python >={{ python_min }}
     - urwid >=2.0.1
     - psutil >=5.9.1
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
